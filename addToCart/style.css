@@ -1,0 +1,110 @@
+*{
+    margin:0;
+    padding:0;
+    user-select: none;
+}
+:root{
+    --light-orange: #f6c52d;
+    --dark-orange : #f5aa15;
+    --succes-green: #7acd1f;
+}
+svg{
+    width: 25px;
+    fill: white;
+    height: 35px;
+    padding: 6px 13px;
+    transition: .2s cubic-bezier(0.13, 0.87, 0.34, 1.63) all;
+}
+.wrapper{
+    position:relative;
+}
+body{
+    background: #f7f7f7;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family : sans-serif;
+    font-weight: 800;
+    color: white;
+}
+.shoping_button{
+    background: var(--light-orange);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.shoping_button:hover > .shopingcart_wrapper{
+    padding-left: 15px;
+}
+.shopingcart_wrapper{
+    background: var(--dark-orange);
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    transition: .2s cubic-bezier(0.13, 0.87, 0.34, 1.63) all;
+}
+.triangle {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0;
+    height: 0;
+    border-right: 10px solid #d4a64c00;
+    border-top: 51px solid #f5aa15;
+}
+p.button_text {
+    flex-grow: 1;
+    text-align: center;
+    transition: .3s all cubic-bezier(0.55, -0.31, 0.48, 1.08);
+}
+.completed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 0%;
+    height: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--succes-green);
+    border-radius: 5px;
+    
+}
+.completed.done{
+    animation: show .4s linear forwards;
+}
+.completed.done svg{
+    animation:dropDown .2s .4s cubic-bezier(0, 0, 0.04, 1.38) forwards;
+}
+.completed svg{
+    width:35px;
+    transform:translateY(-100%) scale(1);
+}
+
+@keyframes show{
+    0%{
+        width:100%;
+        height:100%;
+        opacity:0;
+    }
+    100%{
+        width:100%;
+        height:100%;
+        opacity:1;
+    }
+}
+@keyframes dropDown{
+    50%{
+        transform:translateY(0) scale(1.5);
+    }
+    100%{
+        transform:translateY(0) scale(1);
+    }
+}

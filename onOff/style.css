@@ -1,0 +1,48 @@
+body {
+	 background: #303030;
+	 display: flex;
+	 align-items: center;
+	 height: 100vh;
+	 justify-content: center;
+}
+.toggler {
+    width: 200px;
+    cursor: pointer;
+}
+.round {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 12px solid #303030;
+    background: #7a7a7a;
+    border-radius: 50%;
+    z-index: 2;
+    transition: 0.3s cubic-bezier(0.09, 0.77, 0.83, 1.11) all;
+}
+.round-inner {
+    background: #303030;
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    left: 13px;
+    top: 13px;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.01, 0.64, 0.68, 1) all;
+}
+.track {
+    background: #454545;
+    width: 200px;
+    height: 15px;
+    position: absolute;
+    top: calc(50% - 7.5px);
+    z-index: 1;
+    border-radius: 10px;
+}
+.toggler.active .round-inner {
+    transform: scale(0);
+}
+.toggler.active .round {
+    background: #f7f7f7;
+    transform: translateX(100px);
+}
+ 
