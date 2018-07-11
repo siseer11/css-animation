@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #3c4146;
+    font-family: sans-serif;
+    font-size: 30px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buy-button {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.total-price {
+    background: #00f5c3;
+    color: #3e4246;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #00d7aa;
+    border-radius: 6px;
+    padding: 0 20px;
+    box-shadow: 1px 0px 19px rgba(0,245,195,0.769);
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#count-box {
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: #32373c;
+    box-shadow: inset 1px 3px 2px rgba(0,0,0,0.4);
+}
+span.line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    display: inline-block;
+}
+span.line.line-plus-2 {
+    position: absolute;
+    transform: rotate(90deg);
+}
+.minus, .plus {
+    position: relative;
+    height: 60px;
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plus:hover span, .minus:hover span {
+    background: #00f5c3;
+}
+#count-box p {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#count-box p.less {
+    top: 0;
+    left: -60px;
+}
+#count-box p.actual {
+    top: 0;
+    left: 0;
+}
+#count-box p.more {
+    top: 0;
+    left: 60px;
+}
+.total-price p {
+    letter-spacing: -1px;
+}
+.minus.unclickable {
+    cursor: initial;
+    pointer-events: none;
+}
+.minus.unclickable span {
+    background: rgba(255,255,255,0.2);
+}
+#count-box.transitioning-plus .actual, 
+#count-box.transitioning-plus .less, 
+#count-box.transitioning-plus .more {
+    transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
+    transform: translateX(-60px);
+}
+#count-box.transitioning-minus .actual, 
+#count-box.transitioning-minus .less, 
+#count-box.transitioning-minus .more {
+    transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
+    transform: translateX(60px);
+}
+svg {
+    fill: #00d7aa;
+    width: 30px;
+    margin-right: 10px;
+}
