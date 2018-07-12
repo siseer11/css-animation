@@ -1,8 +1,14 @@
 body {
 	background: #303030;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	height: 100vh;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
@@ -19,6 +25,8 @@ body {
 	background: #7a7a7a;
 	border-radius: 50%;
 	z-index: 2;
+	-webkit-transition: 0.3s cubic-bezier(0.09, 0.77, 0.83, 1.11) all;
+	-o-transition: 0.3s cubic-bezier(0.09, 0.77, 0.83, 1.11) all;
 	transition: 0.3s cubic-bezier(0.09, 0.77, 0.83, 1.11) all;
 }
 
@@ -30,6 +38,8 @@ body {
 	left: 13px;
 	top: 13px;
 	border-radius: 50%;
+	-webkit-transition: 0.3s cubic-bezier(0.01, 0.64, 0.68, 1) all;
+	-o-transition: 0.3s cubic-bezier(0.01, 0.64, 0.68, 1) all;
 	transition: 0.3s cubic-bezier(0.01, 0.64, 0.68, 1) all;
 }
 
@@ -44,10 +54,14 @@ body {
 }
 
 .toggler.active .round-inner {
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
 	transform: scale(0);
 }
 
 .toggler.active .round {
 	background: #f7f7f7;
+	-webkit-transform: translateX(100px);
+	-ms-transform: translateX(100px);
 	transform: translateX(100px);
 }

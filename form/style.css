@@ -5,8 +5,12 @@
 
 body {
   background: rgba(98, 205, 249, 0.99);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 150px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   min-height: 100vh;
   font-family: Roboto;
@@ -18,6 +22,8 @@ body {
 
 .navigation h2 {
   color: #c0ebfd;
+  -webkit-transition: .2s ease all;
+  -o-transition: .2s ease all;
   transition: .2s ease all;
 }
 
@@ -35,18 +41,36 @@ input {
   outline: none;
 }
 
+::-webkit-input-placeholder {
+  color: #d9d9d9
+}
+
+:-ms-input-placeholder {
+  color: #d9d9d9
+}
+
+::-ms-input-placeholder {
+  color: #d9d9d9
+}
+
 ::placeholder {
   color: #d9d9d9
 }
 
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 10px;
   margin-bottom: 30px;
 }
 
 .nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -66,9 +90,13 @@ form {
   position: absolute;
   top: -10px;
   left: 0;
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
   transform: translateX(16px);
   width: 0;
   padding: 0;
+  -webkit-transition: .2s transform cubic-bezier(0.21, 0.71, 0.56, 1.1);
+  -o-transition: .2s transform cubic-bezier(0.21, 0.71, 0.56, 1.1);
   transition: .2s transform cubic-bezier(0.21, 0.71, 0.56, 1.1);
   border-bottom: 10px solid #fff;
   border-right: 10px solid #0000ff00;
@@ -81,6 +109,8 @@ form {
   max-height: 50px;
   cursor: pointer;
   overflow: hidden;
+  -webkit-transition: .2s ease background;
+  -o-transition: .2s ease background;
   transition: .2s ease background;
 }
 
@@ -92,8 +122,14 @@ form {
   height: 50px;
   width: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: #fff;
 }
@@ -103,18 +139,23 @@ form {
 }
 
 #wrapper.sign-up .fake-button {
+  -webkit-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
   transform: translateY(-50px)
 }
 
 .fake-button {
+  -webkit-transition: .2s ease all;
+  -o-transition: .2s ease all;
   transition: .2s ease all;
 }
 
-#wrapper.reset input.pass, 
-#wrapper.reset input.repeat-pass {
+#wrapper.reset input.pass, #wrapper.reset input.repeat-pass {
   display: none;
 }
 
 #wrapper.reset .fake-button {
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
   transform: translateY(-100px);
 }
