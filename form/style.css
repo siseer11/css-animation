@@ -4,7 +4,7 @@
 }
 
 body {
-  background: rgba(98, 205, 249, 0.99);
+  background-color: rgba(98, 205, 249, 0.99);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +104,7 @@ form {
 }
 
 .fake-button-wrapper {
-  background: #099bcf;
+  background-color: #099bcf;
   border-radius: 10px;
   max-height: 50px;
   cursor: pointer;
@@ -115,7 +115,7 @@ form {
 }
 
 .fake-button-wrapper:hover {
-  background: #077ba5;
+  background-color: #077ba5;
 }
 
 .fake-button h4 {

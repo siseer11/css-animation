@@ -4,7 +4,8 @@
 }
 
 body {
-	background: #ececec;
+	background-color: #ececec;
+	font-family: sans-serif;
 }
 
 #wrapper {
@@ -57,7 +58,6 @@ svg:hover {
 
 .votes-wrapper span {
 	font-size: 35px;
-	font-family: sans-serif;
 	display: inline-block;
 }
 

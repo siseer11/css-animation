@@ -8,15 +8,15 @@
 }
 
 .light-orange {
-	background: #f6c52d;
+	background-color: #f6c52d;
 }
 
 .dark-orange {
-	background: #f5aa15;
+	background-color: #f5aa15;
 }
 
 .succes-green {
-	background: #7acd1f;
+	background-color: #7acd1f;
 }
 
 svg {
@@ -34,7 +34,7 @@ svg {
 }
 
 body {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	width: 100%;
 	height: 100vh;
 	display: -webkit-box;

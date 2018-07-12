@@ -31,7 +31,7 @@ body {
 }
 
 .round-inner {
-	background: #303030;
+	background-color: #303030;
 	position: absolute;
 	width: 74px;
 	height: 74px;
@@ -44,7 +44,7 @@ body {
 }
 
 .track {
-	background: #454545;
+	background-color: #454545;
 	width: 200px;
 	height: 15px;
 	position: absolute;
@@ -60,7 +60,7 @@ body {
 }
 
 .toggler.active .round {
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	-webkit-transform: translateX(100px);
 	-ms-transform: translateX(100px);
 	transform: translateX(100px);
