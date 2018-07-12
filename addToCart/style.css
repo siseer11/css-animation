@@ -64,7 +64,7 @@ body {
 	overflow: hidden;
 }
 
-.shoping-button:hover>.shopingcart-wrapper {
+.shoping-button:hover > .shopingcart-wrapper {
 	padding-left: 15px;
 }
 
