@@ -4,10 +4,16 @@
 	user-select: none;
 }
 
-:root {
-	--light-orange: #f6c52d;
-	--dark-orange: #f5aa15;
-	--succes-green: #7acd1f;
+.light-orange {
+	background: #f6c52d;
+}
+
+.dark-orange {
+	background: #f5aa15;
+}
+
+.succes-green {
+	background: #7acd1f;
 }
 
 svg {
@@ -35,7 +41,6 @@ body {
 }
 
 .shoping-button {
-	background: var(--light-orange);
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -49,7 +54,6 @@ body {
 }
 
 .shopingcart-wrapper {
-	background: var(--dark-orange);
 	position: relative;
 	border-radius: 5px;
 	display: flex;
@@ -83,7 +87,6 @@ p.button-text {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: var(--succes-green);
 	border-radius: 5px;
 }
 
