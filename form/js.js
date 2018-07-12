@@ -5,7 +5,6 @@ const getEl = (el,all=false)=>all?document.querySelectorAll(el):document.querySe
 const wrapper = getEl('#wrapper');
 const links = getEl('.navigation h2' , true);
 const triangle = getEl('.triangle');
-const fake_button = getEl('.fake_button');
 const form = getEl('form')
 
 /* LISTENER FOR CLICK ON NAVIGATION */

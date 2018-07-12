@@ -46,7 +46,7 @@ input {
   margin-bottom: 30px;
 }
 
-.nav_left {
+.nav-left {
   display: flex;
 }
 
@@ -54,7 +54,7 @@ input {
   cursor: pointer;
 }
 
-.nav_left h2 {
+.nav-left h2 {
   margin-right: 15px;
 }
 
@@ -75,7 +75,7 @@ form {
   border-left: 10px solid #ffc0cb00;
 }
 
-.fake_button_wrapper {
+.fake-button-wrapper {
   background: #099bcf;
   border-radius: 10px;
   max-height: 50px;
@@ -84,11 +84,11 @@ form {
   transition: .2s ease background;
 }
 
-.fake_button_wrapper:hover {
+.fake-button-wrapper:hover {
   background: #077ba5;
 }
 
-.fake_button h4 {
+.fake-button h4 {
   height: 50px;
   width: 100%;
   text-align: center;
@@ -98,23 +98,23 @@ form {
   color: white;
 }
 
-#wrapper.sign_up input.repeat_pass {
+#wrapper.sign-up input.repeat-pass {
   display: none;
 }
 
-#wrapper.sign_up .fake_button {
+#wrapper.sign-up .fake-button {
   transform: translateY(-50px)
 }
 
-.fake_button {
+.fake-button {
   transition: .2s ease all;
 }
 
 #wrapper.reset input.pass, 
-#wrapper.reset input.repeat_pass {
+#wrapper.reset input.repeat-pass {
   display: none;
 }
 
-#wrapper.reset .fake_button {
+#wrapper.reset .fake-button {
   transform: translateY(-100px);
 }

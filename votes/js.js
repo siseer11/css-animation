@@ -6,9 +6,9 @@ const getEl = (el,all=false) => all?document.querySelectorAll(el):document.query
 let votes = 35; 
 
 const wrapper = getEl('#wrapper');
-const moreVotesHolder = getEl('.more_votes');
-const lessVotesHolder = getEl('.less_votes');
-const actualVotesHolder = getEl('.actual_votes');
+const moreVotesHolder = getEl('.more-votes');
+const lessVotesHolder = getEl('.less-votes');
+const actualVotesHolder = getEl('.actual-votes');
 const upArrow = getEl('.icon-up');
 const downArrow = getEl('.icon-down');
 const allSpans = getEl('span',true);
@@ -64,9 +64,9 @@ function upListener(){
   //Change the status of the app and animate
   changeStatus('up');
   //Get each number span from all the holders
-  let upNumbers = getEl('.more_votes span' , true)
-  let actualNumbers = getEl('.actual_votes span', true)
-  let lessVotes = getEl('.less_votes span' , true)
+  let upNumbers = getEl('.more-votes span' , true)
+  let actualNumbers = getEl('.actual-votes span', true)
+  let lessVotes = getEl('.less-votes span' , true)
   
   
   upNumbers.forEach((el,idx,arr)=>{
@@ -91,9 +91,9 @@ function downListener(){
     return
   }
   
-  let upNumbers = getEl('.more_votes span' , true)
-  let actualNumbers = getEl('.actual_votes span', true)
-  let lessNumbers = getEl('.less_votes span' , true)
+  let upNumbers = getEl('.more-votes span' , true)
+  let actualNumbers = getEl('.actual-votes span', true)
+  let lessNumbers = getEl('.less-votes span' , true)
   
   changeStatus('down');
   lessNumbers.forEach((el,idx,arr)=>{

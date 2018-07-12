@@ -34,7 +34,7 @@ body {
 	color: white;
 }
 
-.shoping_button {
+.shoping-button {
 	background: var(--light-orange);
 	border-radius: 10px;
 	display: flex;
@@ -44,11 +44,11 @@ body {
 	overflow: hidden;
 }
 
-.shoping_button:hover>.shopingcart_wrapper {
+.shoping-button:hover>.shopingcart-wrapper {
 	padding-left: 15px;
 }
 
-.shopingcart_wrapper {
+.shopingcart-wrapper {
 	background: var(--dark-orange);
 	position: relative;
 	border-radius: 5px;
@@ -67,7 +67,7 @@ body {
 	border-top: 51px solid #f5aa15;
 }
 
-p.button_text {
+p.button-text {
 	flex-grow: 1;
 	text-align: center;
 	transition: .3s all cubic-bezier(0.55, -0.31, 0.48, 1.08);

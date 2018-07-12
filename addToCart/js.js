@@ -1,10 +1,10 @@
 const getEl = (el) => document.querySelector(el);
 
 /* All the elements used */
-const shopingButton = getEl('.shoping_button');
-const cartSvg = getEl('svg.shoping_cart');
-const cartHolder = getEl('.shopingcart_wrapper');
-const buttonTxt = getEl('p.button_text');
+const shopingButton = getEl('.shoping-button');
+const cartSvg = getEl('svg.shoping-cart');
+const cartHolder = getEl('.shopingcart-wrapper');
+const buttonTxt = getEl('p.button-text');
 const completedEl = getEl('.completed');
 
 /* Flag to keep track if the mouse was pressed or not */

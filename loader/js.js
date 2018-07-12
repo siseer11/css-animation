@@ -1,4 +1,4 @@
-let z= document.querySelector('.loader_wrapper');
+let z= document.querySelector('.loader-wrapper');
 let allBubles = z.querySelectorAll('li.buble')
 
 function change(){
