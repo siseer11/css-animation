@@ -4,7 +4,6 @@
 const getEl = (el, all = false) => all ? document.querySelectorAll(el) : document.querySelector(el);
 
 let votes = 35;
-
 const wrapper = getEl('#wrapper');
 const moreVotesHolder = getEl('.more-votes');
 const lessVotesHolder = getEl('.less-votes');
@@ -12,7 +11,6 @@ const actualVotesHolder = getEl('.actual-votes');
 const upArrow = getEl('.icon-up');
 const downArrow = getEl('.icon-down');
 const allSpans = getEl('span', true);
-
 let votedFor = 0; //Keep track what the user has voted for (values: 1 / 0 / -1)
 
 /* EVENT LISTENERS */
@@ -52,7 +50,6 @@ populate(votes + 1, moreVotesHolder)
 
 /*Function that get called when the upArrow is beig pressed*/
 function upListener() {
-
   if (votedFor == 1) { //if the user has alredy voted for Up , restore to neutral
     votedFor = 0;
     [...getEl('span', true)].forEach(el => el.classList = '')
@@ -66,7 +63,6 @@ function upListener() {
   let actualNumbers = getEl('.actual-votes span', true)
   let lessVotes = getEl('.less-votes span', true)
 
-
   upNumbers.forEach((el, idx, arr) => {
     //if this peace of number / span is not equal with the one that has to be replaced with then animate , if not , do nothing
     if (el.innerHTML != String(votes)[idx]) {
@@ -79,7 +75,6 @@ function upListener() {
     }
   });
 }
-
 
 function downListener() {
   if (votedFor == -1) {
@@ -95,11 +90,9 @@ function downListener() {
 
   changeStatus('down');
   lessNumbers.forEach((el, idx, arr) => {
-
     if (el.innerHTML != String(votes)[idx]) {
       cleanAndAdd([el, actualNumbers[idx], upNumbers[idx]], 'transition-less');
     }
-
     if (idx == arr.length - 1) {
       votes -= (votedFor == 1) ? 2 : 1;
       votedFor = -1;

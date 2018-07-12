@@ -18,15 +18,11 @@ function setVendor(element, prop, value) {
 /* LISTENER FOR CLICK ON NAVIGATION */
 const linkListener = (e) => {
   const el = e.target;
-
   if (el.classList.contains('active')) return; //if the clicked el is active return
-
   getEl('.navigation h2.active').classList.remove('active');
   el.classList.add('active');
-
   wrapper.classList = '';
   wrapper.classList.add(el.id);
-
   // Move the triangle
   const [elWidth, elLeft, formLeft] = [el.offsetWidth, el.offsetLeft, form.offsetLeft];
   const newPos = elWidth / 2 + elLeft - formLeft - 10;
