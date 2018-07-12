@@ -80,7 +80,8 @@ span.line.line-plus-2 {
 	transform: rotate(90deg);
 }
 
-.minus, .plus {
+.minus, 
+.plus {
 	position: relative;
 	height: 60px;
 	padding: 0 15px;
@@ -96,7 +97,8 @@ span.line.line-plus-2 {
 	justify-content: center;
 }
 
-.plus:hover span, .minus:hover span {
+.plus:hover span, 
+.minus:hover span {
 	background-color: #00f5c3;
 }
 
@@ -144,7 +146,9 @@ span.line.line-plus-2 {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
-#count-box.transitioning-plus .actual, #count-box.transitioning-plus .less, #count-box.transitioning-plus .more {
+#count-box.transitioning-plus .actual,
+#count-box.transitioning-plus .less, 
+#count-box.transitioning-plus .more {
 	-webkit-transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
 	-o-transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
 	transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
@@ -153,7 +157,9 @@ span.line.line-plus-2 {
 	transform: translateX(-60px);
 }
 
-#count-box.transitioning-minus .actual, #count-box.transitioning-minus .less, #count-box.transitioning-minus .more {
+#count-box.transitioning-minus .actual, 
+#count-box.transitioning-minus .less, 
+#count-box.transitioning-minus .more {
 	-webkit-transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
 	-o-transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;
 	transition: 0.2s cubic-bezier(0.01, 0.2, 0.31, 1.24) all;

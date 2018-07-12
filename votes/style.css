@@ -71,7 +71,8 @@ svg:hover {
 	bottom: -50px;
 }
 
-.more-votes, .less-votes, .actual-votes {
+.more-votes, .less-votes, 
+.actual-votes {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex
