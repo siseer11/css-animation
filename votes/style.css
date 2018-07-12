@@ -1,108 +1,117 @@
-*{
-    margin:0;
-    padding:0;
+* {
+	margin: 0;
+	padding: 0;
 }
 
-body{
-    background: #ececec;
+body {
+	background: #ececec;
 }
 
 #wrapper {
-    color: #c9c9c9;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	color: #c9c9c9;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
-svg{
-    fill:#c9c9c9;
-    cursor:pointer;
-    width:60px; 
+svg {
+	fill: #c9c9c9;
+	cursor: pointer;
+	width: 60px;
 }
+
 svg.icon-up {
-    margin-bottom: -20px;
+	margin-bottom: -20px;
 }
+
 svg.icon-down {
-    margin-top: -20px;
+	margin-top: -20px;
 }
-svg:hover{
-    transform:scale(1.2)
+
+svg:hover {
+	transform: scale(1.2)
 }
 
 .votes_wrapper {
-    position:relative;
-    display: flex;
-    padding: 20px 0;
-    overflow:hidden;
+	position: relative;
+	display: flex;
+	padding: 20px 0;
+	overflow: hidden;
 }
-.votes_wrapper span{
-    font-size: 35px;
-    font-family: sans-serif;
-    display: inline-block;
 
+.votes_wrapper span {
+	font-size: 35px;
+	font-family: sans-serif;
+	display: inline-block;
 }
 
 .more_votes {
-    position: absolute;
-    top: -50px;
-}
-.less_votes {
-    position: absolute;
-    bottom: -50px;
-}
-.more_votes , .less_votes , .actual_votes{
-    display:flex
+	position: absolute;
+	top: -50px;
 }
 
-span{
-    transition: .2s cubic-bezier(0, 0.04, 0.13, 1.43) all;
+.less_votes {
+	position: absolute;
+	bottom: -50px;
 }
-span.transition-more{
-    transform:translateY(70px)
+
+.more_votes, .less_votes, .actual_votes {
+	display: flex
 }
-span.transition-less{
-    transform:translateY(-70px)
+
+span {
+	transition: .2s cubic-bezier(0, 0.04, 0.13, 1.43) all;
 }
-  
-#wrapper.up .icon-up{
-    animation : make-green ease .3s forwards
+
+span.transition-more {
+	transform: translateY(70px)
 }
-#wrapper.up{
-    color: rgb(77, 187, 137)
+
+span.transition-less {
+	transform: translateY(-70px)
 }
-#wrapper.down{
-    color: rgb(237, 96, 94)
+
+#wrapper.up .icon-up {
+	animation: make-green ease .3s forwards
 }
-#wrapper.down .icon-down{
-    animation : make-red ease .3s forwards
+
+#wrapper.up {
+	color: rgb(77, 187, 137)
 }
-@keyframes make-green{
-    50%{
-        color: #54bc8c;
-        fill: #54bc8c;
-        transform:scale(1.4)
-    }
-    100%{
-        color: #54bc8c;
-        fill: #54bc8c;
-        transform:scale(1.2);
-    }
+
+#wrapper.down {
+	color: rgb(237, 96, 94)
 }
-@keyframes make-red{
-    50%{
-        color: #ed605d;
-        fill: #ed605d;
-        transform:scale(1.4)
-    }
-    100%{
-        color: #ed605d;
-        fill: #ed605d;
-        transform:scale(1.2);
-    }
+
+#wrapper.down .icon-down {
+	animation: make-red ease .3s forwards
 }
-  
-  
-  
+
+@keyframes make-green {
+	50% {
+		color: #54bc8c;
+		fill: #54bc8c;
+		transform: scale(1.4)
+	}
+	100% {
+		color: #54bc8c;
+		fill: #54bc8c;
+		transform: scale(1.2);
+	}
+}
+
+@keyframes make-red {
+	50% {
+		color: #ed605d;
+		fill: #ed605d;
+		transform: scale(1.4)
+	}
+	100% {
+		color: #ed605d;
+		fill: #ed605d;
+		transform: scale(1.2);
+	}
+}
