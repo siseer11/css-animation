@@ -18,7 +18,7 @@
 
 svg {
 	width: 25px;
-	fill: white;
+	fill: #fff;
 	height: 35px;
 	padding: 6px 13px;
 	transition: .2s cubic-bezier(0.13, 0.87, 0.34, 1.63) all;
@@ -37,7 +37,7 @@ body {
 	justify-content: center;
 	font-family: sans-serif;
 	font-weight: 800;
-	color: white;
+	color: #fff;
 }
 
 .shoping-button {

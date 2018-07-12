@@ -22,7 +22,7 @@ body {
 }
 
 .navigation h2.active {
-  color: white;
+  color: #fff;
 }
 
 input {
@@ -70,7 +70,7 @@ form {
   width: 0;
   padding: 0;
   transition: .2s transform cubic-bezier(0.21, 0.71, 0.56, 1.1);
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #fff;
   border-right: 10px solid #0000ff00;
   border-left: 10px solid #ffc0cb00;
 }
@@ -95,7 +95,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
 }
 
 #wrapper.sign-up input.repeat-pass {
