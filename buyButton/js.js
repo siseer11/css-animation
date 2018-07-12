@@ -14,29 +14,29 @@ const changePrice = (n) => priceHolder.innerHTML = `$${n * oneItemPrice}`;
 
 
 plus.addEventListener('click', () => {
-  if (countBox.classList.contains('transitioning')) return
-  countBox.classList.add('transitioning-plus')
-})
+  if (countBox.classList.contains('transitioning')) return ;
+  countBox.classList.add('transitioning-plus');
+});
 
 minus.addEventListener('click', () => {
-  if (countBox.classList.contains('transitioning')) return
-  countBox.classList.add('transitioning-minus')
-})
+  if (countBox.classList.contains('transitioning')) return ;
+  countBox.classList.add('transitioning-minus');
+});
 
 actualNumberHolder.addEventListener('transitionend', (e) => {
   nItems += (countBox.classList.value == 'transitioning-minus') ? -1 : 1;
 
   if (nItems == 2) {
-    minus.classList.remove('unclickable')
+    minus.classList.remove('unclickable');
   } else if (nItems == 1) {
-    minus.classList.add('unclickable')
+    minus.classList.add('unclickable');
   }
 
   countBox.classList = '';
-  changePrice(nItems)
-  actualNumberHolder.innerHTML = nItems
-  lessNumberHolder.innerHTML = nItems - 1
-  moreNumberHolder.innerHTML = nItems + 1
-})
+  changePrice(nItems);
+  actualNumberHolder.innerHTML = nItems;
+  lessNumberHolder.innerHTML = nItems - 1;
+  moreNumberHolder.innerHTML = nItems + 1;
+});
 
 /* Inspired by https://dribbble.com/shots/3285887-Daily-UI-Responsive-Buy-Button */

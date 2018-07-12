@@ -1,2 +1,2 @@
 const toggler = $('.toggler');
-toggler.click(() => toggler.toggleClass('active'))
+toggler.click(() => toggler.toggleClass('active'));

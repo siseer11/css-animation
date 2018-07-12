@@ -22,24 +22,24 @@ function setVendor(element, prop, value) {
 shopingButton.addEventListener('mousedown', (e) => {
   mouseDown = true;
   cartSvg.style.transform = 'translateX(-10px)'
-})
+});
 
 /* If the user keep the click but leave the page, reset */
 shopingButton.addEventListener('mouseleave', (e) => {
   if (!mouseDown) return;
   cartSvg.style.transform = 'translateX(0px)';
-})
+});
 
 /* When mouse is released, complete animation */
 shopingButton.addEventListener('mouseup', (e) => {
   if (!mouseDown) return;
   setVendor(buttonTxt, 'Transform', 'translateX(100%)')
-  window.setTimeout(() => {
+  window.setTimeout( () => {
     buttonTxt.style.display = 'none';
     cartHolder.style.width = '200%';
     cartSvg.style.opacity = '0';
-    window.setTimeout(() => completedEl.classList.add('done'), 150)
-  }, 200)
-})
+    window.setTimeout( () => completedEl.classList.add('done'), 150);
+  }, 200);
+});
 
 /* inspired by https://www.pinterest.se/pin/160159330483121387/ */

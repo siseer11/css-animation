@@ -1,5 +1,5 @@
 let z = document.querySelector('.loader-wrapper');
-let allBubles = z.querySelectorAll('li.buble')
+let allBubles = z.querySelectorAll('li.buble');
 
 function change() {
   allBubles.forEach((el, idx) => {
@@ -8,10 +8,10 @@ function change() {
     window.setTimeout(() => {
       el.classList.remove(actualClass);
       el.classList.add(newClass);
-    }, 150 * idx)
+    }, 150 * idx);
 
   })
 }
 
-window.setInterval(change, 1500)
-change()
+window.setInterval(change, 1500);
+change();

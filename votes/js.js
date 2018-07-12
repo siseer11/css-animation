@@ -77,32 +77,32 @@ function upListener() {
       votes += (votedFor == -1) ? 2 : 1
       votedFor = 1;
     }
-  })
+  });
 }
 
 
 function downListener() {
   if (votedFor == -1) {
     votedFor = 0;
-    [...getEl('span', true)].forEach(el => el.classList = '')
-    changeStatus('')
+    [...getEl('span', true)].forEach(el => el.classList = '');
+    changeStatus('');
     return
   }
 
-  let upNumbers = getEl('.more-votes span', true)
-  let actualNumbers = getEl('.actual-votes span', true)
-  let lessNumbers = getEl('.less-votes span', true)
+  let upNumbers = getEl('.more-votes span', true);
+  let actualNumbers = getEl('.actual-votes span', true);
+  let lessNumbers = getEl('.less-votes span', true);
 
   changeStatus('down');
   lessNumbers.forEach((el, idx, arr) => {
 
     if (el.innerHTML != String(votes)[idx]) {
-      cleanAndAdd([el, actualNumbers[idx], upNumbers[idx]], 'transition-less')
+      cleanAndAdd([el, actualNumbers[idx], upNumbers[idx]], 'transition-less');
     }
 
     if (idx == arr.length - 1) {
-      votes -= (votedFor == 1) ? 2 : 1
+      votes -= (votedFor == 1) ? 2 : 1;
       votedFor = -1;
     }
-  })
+  });
 }
