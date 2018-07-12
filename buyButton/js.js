@@ -13,25 +13,25 @@ const oneItemPrice = 35;
 const changePrice = (n) => priceHolder.innerHTML = `$${n * oneItemPrice}`;
 
 
-plus.addEventListener('click',()=>{
-  if(countBox.classList.contains('transitioning')) return
+plus.addEventListener('click', () => {
+  if (countBox.classList.contains('transitioning')) return
   countBox.classList.add('transitioning-plus')
 })
 
-minus.addEventListener('click',()=>{
-  if(countBox.classList.contains('transitioning')) return
+minus.addEventListener('click', () => {
+  if (countBox.classList.contains('transitioning')) return
   countBox.classList.add('transitioning-minus')
 })
 
-actualNumberHolder.addEventListener('transitionend',(e)=>{ 
-  nItems += (countBox.classList.value == 'transitioning-minus')?-1:1;
-  
-  if(nItems == 2){
+actualNumberHolder.addEventListener('transitionend', (e) => {
+  nItems += (countBox.classList.value == 'transitioning-minus') ? -1 : 1;
+
+  if (nItems == 2) {
     minus.classList.remove('unclickable')
-  }else if(nItems == 1){
+  } else if (nItems == 1) {
     minus.classList.add('unclickable')
   }
-  
+
   countBox.classList = '';
   changePrice(nItems)
   actualNumberHolder.innerHTML = nItems
