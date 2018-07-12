@@ -7,6 +7,14 @@ const links = getEl('.navigation h2', true);
 const triangle = getEl('.triangle');
 const form = getEl('form')
 
+/*Prefixes for css*/
+function setVendor(element, prop, value) {
+  element.style[`webkit${prop}`] = value;
+  element.style[`moz${prop}`] = value;
+  element.style[`ms${prop}`] = value;
+  element.style[`o${prop}`] = value;
+}
+
 /* LISTENER FOR CLICK ON NAVIGATION */
 const linkListener = (e) => {
   const el = e.target;
@@ -21,10 +29,8 @@ const linkListener = (e) => {
 
   // Move the triangle
   const [elWidth, elLeft, formLeft] = [el.offsetWidth, el.offsetLeft, form.offsetLeft];
-  console.log(elWidth, elLeft, formLeft)
   const newPos = elWidth / 2 + elLeft - formLeft - 10;
-  triangle.style.transform = 'translateX(' + newPos + 'px)'
-
+  setVendor(triangle , 'Transform' , `translateX(${newPos}px)`)
 }
 
 /* FOR EVERY LINK IN THE NAV LISTEN TO CLICK ON IT */

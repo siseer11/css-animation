@@ -10,6 +10,14 @@ const completedEl = getEl('.completed');
 /* Flag to keep track if the mouse was pressed or not */
 let mouseDown = false;
 
+/*Prefixes for css*/
+function setVendor(element, prop, value) {
+  element.style[`webkit${prop}`] = value;
+  element.style[`moz${prop}`] = value;
+  element.style[`ms${prop}`] = value;
+  element.style[`o${prop}`] = value;
+}
+
 /* When mouse is pressed change flag, and move the cart */
 shopingButton.addEventListener('mousedown', (e) => {
   mouseDown = true;
@@ -25,7 +33,7 @@ shopingButton.addEventListener('mouseleave', (e) => {
 /* When mouse is released, complete animation */
 shopingButton.addEventListener('mouseup', (e) => {
   if (!mouseDown) return;
-  buttonTxt.style.transform = 'translateX(100%)';
+  setVendor(buttonTxt, 'Transform', 'translateX(100%)')
   window.setTimeout(() => {
     buttonTxt.style.display = 'none';
     cartHolder.style.width = '200%';
